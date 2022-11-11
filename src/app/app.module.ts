@@ -11,6 +11,7 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { LoginComponent } from './Components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
+    ResetPasswordComponent,
   ],
 
   imports: [

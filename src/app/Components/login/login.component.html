@@ -1,0 +1,45 @@
+<form class="form">
+
+    <div class="container">
+        <div class="emailpassword">
+            <div class="form-head">
+                <div fxLayout="row" style="font-weight:500">
+                    <span style="font-size: 30px ; color: #4285F4">F</span>
+                    <span style="font-size: 30px ; color: #EA4335">u</span>
+                    <span style="font-size: 30px ; color: #FBBC05">n</span>
+                    <span style="font-size: 30px ; color: #4285F4">d</span>
+                    <span style="font-size: 30px ; color: #34A853">o</span>
+                    <span style="font-size: 30px ; color: #EA4335">o</span>
+                </div>
+            </div>
+            <p class="head-form">Use your Fundoo account</p>
+            <p>
+                <mat-form-field class="email" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email">
+                </mat-form-field>
+                <mat-form-field class="password" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="Password">
+                </mat-form-field>
+            </p>
+            <div class="showPassword">
+                <input type="checkbox">
+                <label>Show Password</label>
+            </div>
+            <div><a class="forgetemail" mat-button routerLink="" target="_blank">Forget Email?</a>
+                 <a class="forgetpassword" mat-button routerLink="/resetpassword" target="_blank">Forget Password?</a></div>
+            <div>
+                <mat-hint>
+                    <h3>Not your computer? Use Guest mode to sign in privately</h3>
+                </mat-hint>
+                <a class="learn" mat-button href="" target="_blank">Learn more</a>
+                <div>
+                    <a class="create" mat-button routerLink="/register" target="_blank">Create account</a>
+                    <button class="btnNext" mat-flat-button color="primary">Login</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>

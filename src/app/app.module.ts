@@ -9,15 +9,17 @@ import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { LoginComponent } from './Components/login/login.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent,
   ],
+
   imports: [
     BrowserModule,
     MatFormFieldModule,

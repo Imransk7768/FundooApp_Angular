@@ -10,14 +10,24 @@ export class UserService {
   constructor(private httpservice : HttpService) { }
 
   Login(reqdata:any){
-    console.log(reqdata);
+    //console.log(reqdata);
 
     let header = {
       headers:new HttpHeaders({
         'Content-type':'application/json',
+        //'Authorisation':'token'
       })
     }
     return this.httpservice.postService('/User/Login',reqdata,false,header)
   }
+  Register(reqdata:any){
 
+    let header = {
+      header:new HttpHeaders({
+        'Content-type':'application/json',
+        //'Authorisation':'token'
+      })
+    }
+    return this.httpservice.postService('/User/Register',reqdata,false,header);
+  }
 }

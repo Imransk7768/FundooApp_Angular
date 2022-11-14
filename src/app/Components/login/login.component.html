@@ -1,8 +1,7 @@
-<form class="form">
-
+<div class="layout">
     <div class="container">
-        <div class="emailpassword">
-            <div class="form-head">
+        <div class="log-container" >
+            <div class="form-head" fxLayout="column" fxLayoutAlign=" center">
                 <div fxLayout="row" style="font-weight:500">
                     <span style="font-size: 30px ; color: #4285F4">F</span>
                     <span style="font-size: 30px ; color: #EA4335">u</span>
@@ -11,35 +10,42 @@
                     <span style="font-size: 30px ; color: #34A853">o</span>
                     <span style="font-size: 30px ; color: #EA4335">o</span>
                 </div>
-            </div>
-            <p class="head-form">Use your Fundoo account</p>
-            <p>
-                <mat-form-field class="email" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Email">
-                </mat-form-field>
-                <mat-form-field class="password" appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input type="password" matInput placeholder="Password">
-                </mat-form-field>
-            </p>
-            <div class="showPassword">
-                <input type="checkbox">
-                <label>Show Password</label>
-            </div>
-            <div><a class="forgetemail" mat-button routerLink="" target="_blank">Forget Email?</a>
-                 <a class="forgetpassword" mat-button routerLink="/resetpassword" target="_blank">Forget Password?</a></div>
-            <div>
-                <mat-hint>
-                    <h3>Not your computer? Use Guest mode to sign in privately</h3>
-                </mat-hint>
-                <a class="learn" mat-button href="" target="_blank">Learn more</a>
-                <div>
-                    <a class="create" mat-button routerLink="/register" target="_blank">Create account</a>
-                    <button class="btnNext" mat-flat-button color="primary">Login</button>
+                <div class='form-account'>
+                    <span><h1>Your Fundoo Account</h1></span>   
                 </div>
             </div>
+            <form>
+                <div class="form-group form-container" fxLayout="column">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Enter email" >
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" placeholder="Enter password" >
+                    </mat-form-field>
+                </div>
+                <div class="showPassword">
+                    <input type="checkbox">
+                    <label>Show Password</label>
+                </div>
+                <div class="form-group " fxLayoutGap="10px">
+                    <button mat-button class="btn-basic" routerLink="/">forget email?</button>
+                    <button mat-button class="btn-basic" routerLink="/forgetpassword">forget password?</button>
+                </div>
+                <div>
+                    <mat-hint>
+                        <h3>Not your computer? Use Guest mode to sign in privately</h3>
+                    </mat-hint>
+                    <div class="form-group buttons" fxLayoutGap="10px">
+                        <button mat-button class="btn-basic" routerLink="/">Learn more</button>
+                    </div>
+                    <div class="form-group buttons" fxLayoutGap="10px">
+                        <button mat-button class="btn-basic" routerLink="/register">Create account</button>
+                        <button class="btnLogin" mat-flat-button color="primary">Login</button>
+                    </div>
+                </div>
+            </form>
         </div>
-
     </div>
-</form>
+</div>

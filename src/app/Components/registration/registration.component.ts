@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit
     this.registerForm = this.formBuilder.group({
       firstName: ['', [Validators.required, Validators.pattern("^[A-Z]{1}[a-z]{2,}$")]],
       lastName: ['', [Validators.required, Validators.pattern("^[A-Z]{1}[a-z]{2,}$")]],
-      userName: ['', Validators.required],
+      userName: ['', Validators.required,],
       //email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required]
@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit
       let payload = {
         firstName:this.registerForm.value.firstName,
         lastName:this.registerForm.value.lastName,
-        email:this.registerForm.value.email,
+        email:this.registerForm.value.userName,
         password:this.registerForm.value.password,
         service:"advance"
       }

@@ -16,7 +16,12 @@ export class HttpService {
     return this.httpclient.post(this.baseUrl+url,reqdata,token && httpOptions);
   }
   getService(){}
-  putService(){}
+
+  putService(url:string,reqdata:any,token:boolean=false,httpOptions:any)
+  {
+    return this.httpclient.post(this.baseUrl+url,reqdata,token && httpOptions);
+  }
+  
   deleteService(){}
   patchService(){}
   

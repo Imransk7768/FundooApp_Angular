@@ -33,6 +33,7 @@ onSubmit() {
     }
     this.user.Login(payload).subscribe((response:any)=>{
       console.log(response)
+      localStorage.setItem("token",response.data)
     })
   }
 }

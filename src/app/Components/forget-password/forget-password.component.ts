@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userServices/user.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -10,8 +11,7 @@ export class ForgetPasswordComponent implements OnInit {
   forgetPwdForm!: FormGroup;
   submitted = false;
 
-
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private user:UserService) { }
 
   ngOnInit() {
     this.forgetPwdForm = this.formBuilder.group({
@@ -24,16 +24,16 @@ export class ForgetPasswordComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.forgetPwdForm.invalid) {
-      return;
+    if (this.forgetPwdForm.valid) {
+      let payload = {
+        email: this.forgetPwdForm.value.email,
+        service: 'advance'
+      }
+
+      this.user.ForgetPassword(payload).subscribe((response: any) => {
+        console.log(response)
+        localStorage.setItem("token",response.data)
+      })
     }
-
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.forgetPwdForm.value, null, 4));
-  }
-
-  onReset() {
-    this.submitted = false;
-    this.forgetPwdForm.reset();
   }
 }

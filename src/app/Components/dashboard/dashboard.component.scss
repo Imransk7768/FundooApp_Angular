@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.newIcon {
+    margin: 3px;
+    padding: 8px;
+    position: relative;
+    border: none;
+    width: 53px;
+    background: #d4dee3;
+    cursor: pointer;
+}
+
+.sea {
+    column-width: 2000px;
+    overflow: hidden;
+}
+
+.searchBar {
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    position: relative;
+    padding: 0px 30px;
+    display: flex;
+    font-size: 16px;
+    outline: 0;
+    background: #f1f3f4;
+    border: 1px solid transparent;
+    column-width: 550px;
+}
+
+.search {
+    height: 55px;
+    border: none;
+    font-size: larger;
+    background: #f1f3f4;
+    width: 50px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.keepimage {
+    margin-left: 1%;
+
+}
+
+.menuimage {
+
+    margin-left: 1%;
+}
+
+.midbtn {
+
+    margin-left: 30%;
+
+    margin-right: 12%;
+}
+
+.accountimg {
+    margin-left: 5%;
+}
+
+form.onsearch {
+    border: none;
+    padding: 0;
+    margin-left: -4%;
+}
+
+input.onsearch {
+    border-radius: 12px;
+    margin-left: 25%;
+    height: 10%;
+    width: 550px;
+    border: 1px solid rgb(194, 189, 189);
+    display: block;
+    padding: 15px 16px 18px 80px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.sidenavimage {
+    margin-left: 2%;
+    margin-top: 1.5%;
+}
+.accountimg
+{
+    margin-left: 5%;
+}
+.menuimg 
+{
+    margin-top: 2%;
+}
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+}
+h1.example-app-name {
+    margin-left: 8px;
+}
+.example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    height: 550px;
+    overflow-y: hidden;
+
+}
+.hide {
+    height: 500px;
+    overflow-y: hidden;
+}
+.example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}

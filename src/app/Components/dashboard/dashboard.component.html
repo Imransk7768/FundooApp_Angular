@@ -1,0 +1,59 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+     
+    <div class="img-width">
+      <img src="../../../assets/keep.png" class="Register-img">
+      <!-- <figcaption class="img-content">One account. All of Fundoo<br> working for you.</figcaption> -->
+  </div>
+  <div fxLayoutAlign="start">
+    <h1 class="example-app-name">
+        <div fxLayout="row" style="font-weight:500">
+            <span style="font-size: 30px ; color: #4285F4">K</span>
+            <span style="font-size: 30px ; color: #EA4335">e</span>
+            <span style="font-size: 30px ; color: #FBBC05">e</span>
+            <span style="font-size: 30px ; color: #49f463">p</span>
+        </div>
+    </h1>
+  
+  </div>
+  <div class="search-box">
+    <img type="image" src="../../../assets/searchicon.png" class="upper-icon">
+    <input type="search" placeholder="Search...">
+</div>
+  <div class="topnav-icon">
+  <a mat-list-item routerLink="/dashboard/notes"> <img src="../../../assets/refresh.png" class="upper-icon"></a>
+  <a mat-list-item routerLink="/dashboard/notes"> <img src="../../../assets/listview.png" class="upper-icon"></a>
+  <img src="../../../assets/settings.png" class="upper-icon">
+  <a class="right-end">
+    <img src="../../../assets/apps.png" class="upper-icon">
+    <img src="../../../assets/profile.png" class="upper-icon">
+  </a>
+  </div>
+    </mat-toolbar>
+    <div class="menu" fxLayout="row" fxLayoutGap="20px">
+        <div class="menuimg" fxLayout="column" fxLayoutGap="20px">
+            <img type="image" src="../../../assets/lightbulb.png" height="28px" width="28px">
+            <img type="image" src="../../../assets/notifications.png" height="28px" width="28px">
+            <img type="image" src="../../../assets/edit.png" height="28px" width="28px">
+            <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
+            <img type="image" src="../../../assets/delete.png" height="28px" width="28px">
+        </div>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list class="navlist">
+                <mat-list role="list" class="hide">
+                    <mat-list-item role="listitem">Notes</mat-list-item>
+                    <mat-list-item role="listitem">reminder</mat-list-item>
+                    <mat-list-item role="listitem">edit</mat-list-item>
+                    <mat-list-item role="listitem">archive</mat-list-item>
+                    <mat-list-item role="listitem">trash</mat-list-item>
+                </mat-list>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="note-panel">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container> 
+  </div>

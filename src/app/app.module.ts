@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +19,21 @@ import { LoginComponent } from './Components/login/login.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+
+import { CreateNotesComponent } from './Components/create-notes/create-notes.component';
+import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { IconsComponent } from './Components/icons/icons.component';
+
+import {MatExpansionModule} from '@angular/material/expansion';
+import { TrashComponent } from './Components/trash/trash.component';
+import { ArchiveComponent } from './Components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +41,14 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     RegistrationComponent,
     LoginComponent,
     ResetPasswordComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    DashboardComponent,
+    CreateNotesComponent,
+    DisplayNotesComponent,
+    GetAllNotesComponent,
+    IconsComponent,
+    TrashComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +63,12 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     HttpClientModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

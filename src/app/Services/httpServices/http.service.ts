@@ -15,13 +15,12 @@ export class HttpService {
   {
     return this.httpclient.post(this.baseUrl+url,reqdata,token && httpOptions);
   }
-  getService(){}
-
+  
   putService(url:string,reqdata:any,token:boolean=false,httpOptions:any)
   {
-    return this.httpclient.post(this.baseUrl+url,reqdata,token && httpOptions);
+    return this.httpclient.put(this.baseUrl+url,reqdata,token && httpOptions);
   }
-  
+  getService(){}
   deleteService(){}
   patchService(){}
   

@@ -24,14 +24,13 @@ export class NoteService {
     }
     return this.httpservice.postService('/Notes/Create', reqdata, true, header);
   }
-  // GetNotes(){
-  //   let header={
-  //     headers:new HttpHeaders({
-  //       'Content-type': 'application/json',
-  //       'Authorization': 'bearer '+this.token
-  //     })
-  //   }
-  //   return this.httpservice.getService('/Notes/Retrieve',true,header);
-  // }
-} 
-
+  GetNotes(){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'bearer '+this.token
+      })
+    }
+    return this.httpservice.getService('/Notes/Retrieve',true,header);
+  }
+}

@@ -21,7 +21,6 @@ export class CreateNotesComponent implements OnInit {
       title: ['', Validators.required],
       description: ['', Validators.required]
     });
-
   }
   show() {
     this.isShow = true;

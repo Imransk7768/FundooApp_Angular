@@ -20,7 +20,10 @@ export class HttpService {
   {
     return this.httpclient.put(this.baseUrl+url,reqdata,token && httpOptions);
   }
-  getService(){}
+  getService(url:string,token:boolean=false,httpOptions:any)
+  {
+    return this.httpclient.get(this.baseUrl+url,token && httpOptions);
+  }
   deleteService(){}
   patchService(){}
   

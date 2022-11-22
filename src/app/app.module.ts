@@ -34,6 +34,7 @@ import { IconsComponent } from './Components/icons/icons.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { TrashComponent } from './Components/trash/trash.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import { AUthguardService } from './Services/AuthGuard/authguard.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,9 @@ import { ArchiveComponent } from './Components/archive/archive.component';
     MatListModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    AUthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

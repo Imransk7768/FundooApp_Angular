@@ -11,13 +11,16 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 
 import { TrashComponent } from './Components/trash/trash.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import { AuthenticationGuard } from './Authguard/authentication.guard';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
+  //{path :'',redirectTo:"/login",pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'resetpassword', component:ResetPasswordComponent},
   {path:'forgetpassword',component:ForgetPasswordComponent},
   {path:'dashboard',component:DashboardComponent,
+  canActivate:[AuthenticationGuard],
   children:[
     {path:'notes',component:GetAllNotesComponent},
     {path:'trash',component:TrashComponent},

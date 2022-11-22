@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-display-notes',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display-notes.component.scss']
 })
 export class DisplayNotesComponent implements OnInit {
+  panelopenstate=false;
+  show=false;
+
+  submitted=false;
+  title:any;
+  discription:any;
 
   constructor() { }
+  @Input() NotesList:any;
 
   ngOnInit(): void {
   }
-
+  
 }

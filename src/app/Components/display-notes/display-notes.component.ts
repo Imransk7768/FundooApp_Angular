@@ -9,7 +9,7 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
   styleUrls: ['./display-notes.component.scss']
 })
 export class DisplayNotesComponent implements OnInit {
-
+  noteArray:any;
   panelopenstate=false;
   show=false;
 

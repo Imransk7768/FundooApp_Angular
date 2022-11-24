@@ -48,9 +48,9 @@ input:focus {
 }
 
 .btnclose {
-    display: flex;
-    align-items: center;
-    margin-left: 70px;
+    //display: flex;
+    //align-items: center;
+    margin-left: 180px;
     border: none;
     border-radius: 8px;
 
@@ -90,11 +90,13 @@ input:focus {
 .row-in
 {
     display: flex;
-    // margin-left: 63px;
+    //margin-left: 150px;
+    margin-top: 10px;
+    //align-items: center;
 }
 .note{
     display: flex;
 }
 .imgin ,.imgout{
-    margin-right: 30px;
+    margin-right: 10px;
 }

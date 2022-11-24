@@ -15,7 +15,7 @@ import { AuthenticationGuard } from './Authguard/authentication.guard';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
-  //{path :'',redirectTo:"/login",pathMatch:'full'},
+  {path :'',redirectTo:"/login",pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'resetpassword', component:ResetPasswordComponent},
   {path:'forgetpassword',component:ForgetPasswordComponent},

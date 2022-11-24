@@ -1,1 +1,33 @@
-<p>icons works!</p>
+<div class="OuterDiv">
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/alert.svg" alt="">
+    </div>
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/collab.svg" alt="">
+    </div>
+
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/background.svg" alt="">
+
+        <div fxLayout="row wrap" class="colour" fxLayoutAlign="start center" style="padding-left: 3px;"> </div>
+    </div>
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/image.svg" alt="">
+    </div>
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/archive.png"  alt="">
+    </div>
+    <div class="add">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <img class="divImg menu" src="../../../assets/more_vert.png" alt="">
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show tick boxes</button>
+            <button mat-menu-item>Copy to Google Docs</button>
+        </mat-menu>
+    </div>
+</div>

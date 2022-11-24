@@ -1,22 +1,18 @@
-<div fxLayout="row wrap" fxLayoutGap="grid" class="container">
-    <div fxLayout="column"  fxLayoutAlign=" center" *ngFor="let notes of NotesList">
-        <div class="content">
-            <div class="pin"><img src="../../../assets/pin.svg" alt="" width="25px" /></div>
-            <div class="text">
-                {{notes.title}}
-            </div>
-            <div class="text">
-                {{notes.description}}
-            </div>
-            <div class="row-in" style="flex-direction: row;" >
-                <div class="imgin"> <img src="../../../assets/alert.svg" alt="" width="25px" /></div>
-                <div class="imgin"> <img src="../../../assets/collab.svg" alt="" width="25px" /></div>
-                <div class="imgin"> <img src="../../../assets/background.svg" alt="" width="25px" /></div>
-                <div class="imgin"> <img src="../../../assets/image.svg" alt="" width="25px" /></div>
-                <div class="imgin"> <img src="../../../assets/archive.png" alt="" width="25px" /></div>
-                <div class="imgin"> <img src="../../../assets/more_vert.png" alt="" width="25px" /></div>
-            </div>
+<div class="container" fxLayout="row wrap" fxLayoutGap="grid">
+  <div fxLayout="column" fxLayoutAlign=" center" *ngFor="let notes of NotesList" class="con">
+    <div class="content">
+      <div (click)="openDialog(notes)">
+        <div class="pin"><img src="../../../assets/pin.svg" alt="" width="25px" /></div>
+        <div>
+          <p class="text">{{notes.title}}</p>
+          <p class="text">{{notes.description}}</p>
         </div>
-    </div>
 
+        <!-- <div> {{notes.noteId}}</div> -->
+      </div>
+      <div class="row-in" style="flex-direction: row;">
+        <app-icons></app-icons>
+      </div>
+    </div>
+  </div>
 </div>

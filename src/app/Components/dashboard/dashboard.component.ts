@@ -16,9 +16,7 @@ constructor(media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) {
     this.mobileQuery.addListener(this._mobileQueryListener);
    }
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }

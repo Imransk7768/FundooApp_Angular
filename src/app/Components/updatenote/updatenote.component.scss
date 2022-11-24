@@ -1,0 +1,47 @@
+.container{
+    padding: 10px;
+}
+.text-Title{
+    font-size  : 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    padding-bottom: 12px;
+    padding-top: 0px;
+    outline: none;
+}
+ 
+.text-description{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 4px 0px 12px 0px;
+    overflow: auto;
+   outline: none;
+}
+.desbody, .tltbody{
+    //width: 400px; 
+    height: 30px; 
+    border: none; 
+    outline: none;
+}
+.btnclose
+{
+    opacity: 0.9;
+    margin: 0px 10px 20px 0px;
+}
+.notesbutton{
+   display: flex;
+   gap: 19px;
+   border: none;
+   background: none;
+   cursor: pointer;
+   img{
+       height: 20px;
+       width: 20px;
+       padding-top: 10px;
+   }
+}
+.icons{
+   display: flex;
+   gap: 20px;
+}

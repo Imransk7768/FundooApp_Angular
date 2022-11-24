@@ -1,0 +1,18 @@
+<div class="container">
+    <div>
+        <div class="text-Title">
+            <input matInput [(ngModel)]="title" class="tltbody">
+        </div>
+        <div class="text-description">
+            <input matInput [(ngModel)]="description" class="desbody">
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between end">
+            <div class="icons">
+                <app-icons></app-icons>
+            </div>
+            <div>
+                <button mat-icon-button (click)="closeDialog()" class="btnclose">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

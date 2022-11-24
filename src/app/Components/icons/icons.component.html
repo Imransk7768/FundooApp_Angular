@@ -15,14 +15,14 @@
         <img class="divImg" src="../../../assets/image.svg" alt="">
     </div>
     <div role="button" class="add">
-        <img class="divImg" src="../../../assets/archive.png"  alt="">
+        <img class="divImg" src="../../../assets/archive.png" (click)=" archeive()" alt="">
     </div>
     <div class="add">
         <button mat-icon-button [matMenuTriggerFor]="menu">
             <img class="divImg menu" src="../../../assets/more_vert.png" alt="">
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item (click)="trash()">Delete note</button>
             <button mat-menu-item>Add label</button>
             <button mat-menu-item>Add drawing</button>
             <button mat-menu-item>Make a copy</button>

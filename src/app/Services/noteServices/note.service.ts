@@ -60,4 +60,13 @@ export class NoteService {
     }
     return this.httpservice.putService(`/Notes/Archieve?noteId=${data.noteId}`,data,true,header);
   }
+  BackColor(data:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'bearer '+this.token
+      })
+    }
+    return this.httpservice.putService(`/Notes/Color?noteId=${data.noteId}&backgroundColor=${data.Color}`,data,true,header);
+  }
 }

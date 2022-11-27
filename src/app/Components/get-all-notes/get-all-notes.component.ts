@@ -19,6 +19,14 @@ export class GetAllNotesComponent implements OnInit {
     this.notesService.GetNotes().subscribe((request:any)=>{
       console.log("request data",request);
       this.noteArray=request.data;
+      this.noteArray.reverse();
+      this.noteArray=this.noteArray.filter((notedata:any)=>{
+        return notedata.trash == false && notedata.archive == false;
+      })
     })
+  }
+  receiveMsgfromDisplay($event:any){
+    console.log("inside display to get all notes",$event)
+    this.getAllNotes();
   }
 }

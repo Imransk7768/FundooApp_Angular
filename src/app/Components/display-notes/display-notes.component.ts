@@ -1,5 +1,5 @@
 import { Dialog } from '@angular/cdk/dialog';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
@@ -10,6 +10,7 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 })
 export class DisplayNotesComponent implements OnInit {
   noteArray:any;
+  msg:any;
   panelopenstate=false;
   show=false;
 
@@ -17,6 +18,7 @@ export class DisplayNotesComponent implements OnInit {
 
   constructor(private dialog:MatDialog) { }
   @Input() NotesList:any;
+  @Output() displaytoGetAllNotes = new EventEmitter<string>();
   
   ngOnInit(): void {}
 
@@ -31,5 +33,10 @@ export class DisplayNotesComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result=>{
       console.log('the Dialog was Closed',result);
     })
+  }
+  receiveMsgIconsToDisplay($event:any){
+    console.log("msg icon to display",$event)
+    this.msg = $event;
+    this.displaytoGetAllNotes.emit(this.msg);
   }
 }

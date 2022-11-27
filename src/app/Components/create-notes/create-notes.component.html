@@ -1,6 +1,6 @@
 <div class="container">
-    <form [formGroup]="noteForm" (ngSubmit)="close">
-        <div class="content">
+    <form [formGroup]="noteForm">
+        <div class="content" >
             <div *ngIf="isShow">
                 <input class="txtclass" type="text" placeholder="Title" formControlName="title">
                 <div class="img"> <img src="../../../assets/pin.svg" alt="" width="25px" /></div>
@@ -16,7 +16,7 @@
             <div *ngIf="isShow">
                 <div class="ic" style="flex-direction: row;">
                     <div>
-                        <app-icons></app-icons>
+                        <app-icons ></app-icons>
                     </div>
                     <div class="close row-in">
                         <div class="imgin"> <img src="../../../assets/undo.svg" alt="" width="25px" /></div>

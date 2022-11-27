@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from 'src/app/Services/noteServices/note.service';
 
@@ -15,11 +15,12 @@ export class CreateNotesComponent implements OnInit {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,private note:NoteService) { }
-
+@Output() displaytoGetAllNotes = new EventEmitter<string>();
   ngOnInit(): void {
     this.noteForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required]
+
     });
   }
   show() {
@@ -37,8 +38,12 @@ export class CreateNotesComponent implements OnInit {
       }
       this.note.CreateNote(notedata).subscribe((response:any)=>{
       console.log(response)
-      localStorage.setItem("token",response.data);
+      this.displaytoGetAllNotes.emit(response);
       })
     }
   }
+  // hideAndShow(){
+  //   console.log("hiding the description")
+  //   this.isShow = !this.isShow;
+  // }
 }

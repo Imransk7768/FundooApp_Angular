@@ -23,11 +23,14 @@
 </div>
   <div class="topnav-icon">
   <a mat-list-item routerLink="/dashboard/notes"> <img src="../../../assets/refresh.png" class="upper-icon"></a>
-  <a mat-list-item routerLink="/dashboard/notes"> <img src="../../../assets/listview.png" class="upper-icon"></a>
+  <a mat-list-item > <img src="../../../assets/listview.png" class="upper-icon"></a>
   <img src="../../../assets/settings.png" class="upper-icon">
   <a class="right-end">
     <img src="../../../assets/apps.png" class="upper-icon">
-    <img src="../../../assets/profile.png" class="upper-icon">
+    <img src="../../../assets/profile.png" class="upper-icon" [matMenuTriggerFor]="menu">
+    <mat-menu #menu>
+      <button  mat-menu-item (click)="Logout()">Logout</button>
+    </mat-menu>
   </a>
   </div>
     </mat-toolbar>
@@ -36,7 +39,7 @@
             <img type="image" src="../../../assets/lightbulb.png" height="28px" width="28px">
             <img type="image" src="../../../assets/notifications.png" height="28px" width="28px">
             <img type="image" src="../../../assets/edit.png" height="28px" width="28px">
-            <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
+            <img type="image" src="../../../assets/archive.png" (click)="Archive()" height="28px" width="28px">
             <img type="image" src="../../../assets/delete.png" height="28px" width="28px">
         </div>
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -44,11 +47,11 @@
             fixedTopGap="56">
             <mat-nav-list class="navlist">
                 <mat-list role="list" class="hide">
-                    <mat-list-item role="listitem">Notes</mat-list-item>
+                    <mat-list-item role="listitem" (click)="Notes()">Notes</mat-list-item>
                     <mat-list-item role="listitem">reminder</mat-list-item>
                     <mat-list-item role="listitem">edit</mat-list-item>
-                    <mat-list-item role="listitem">archive</mat-list-item>
-                    <mat-list-item role="listitem">trash</mat-list-item>
+                    <mat-list-item role="listitem" (click)="Archive()">archive</mat-list-item>
+                    <mat-list-item role="listitem" (click)="Trash()">trash</mat-list-item>
                 </mat-list>
             </mat-nav-list>
         </mat-sidenav>

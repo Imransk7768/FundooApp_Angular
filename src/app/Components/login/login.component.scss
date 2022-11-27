@@ -2,8 +2,8 @@
 {
     display: flex;
     justify-content: center;
-    padding-left: 25%;
-    padding-right: 25%;
+    // padding-left: 25%;
+    // padding-right: 25%;
 }
 .container
 {
@@ -15,8 +15,31 @@
     border-radius: 10px;
     font-size: 16px;
     margin-top: 50px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+
+    .container
+{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border: 0px ;
+    box-shadow: 0px 0px 0px #00000029;
+    border-radius: 0px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+.layout
+{
+    //display: flex;
+    //justify-content: center;
+    // padding-left: 25%;
+    // padding-right: 25%;
+}
 }
 .form-head 
 {

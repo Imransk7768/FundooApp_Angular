@@ -1,29 +1,41 @@
-.OuterDiv{
+.OuterDiv {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 10px;
-   
+
 }
-.add{
+
+.add {
     padding-top: 10px;
     padding-right: 8px;
     // border: 10px;
     margin: 0 5px;
-    .material-symbols-outlined{
+
+    .material-symbols-outlined {
         padding: 10px;
     }
-    .divImg{
+
+    .divImg {
         display: flex;
         width: 25px;
         height: 25px;
         //padding-left: 20px;
     }
 }
-.icons{
+
+.icons {
     height: 30px;
 }
-.menu
-{
-    padding:0px 0px 15px 8px;
+
+.menu {
+    padding: 0px 0px 15px 8px;
+}
+
+.color {
+    height: 70px;
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 12px;
 }

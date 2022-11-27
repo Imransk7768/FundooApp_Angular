@@ -5,12 +5,20 @@
     <div role="button" class="add">
         <img class="divImg" src="../../../assets/collab.svg" alt="">
     </div>
-
-    <div role="button" class="add">
-        <img class="divImg" src="../../../assets/background.svg" alt="">
-
-        <div fxLayout="row wrap" class="colour" fxLayoutAlign="start center" style="padding-left: 3px;"> </div>
+    <div>
+        <div role="button" class="add" [matMenuTriggerFor]="colormenu">
+            <img class="divImg" src="assets/background.svg" alt="">
+            <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
+                <div class="color" fxLayout="row wrap" fxLayoutAlign="start center">
+                    <div *ngFor="let color of colors" >
+                        <button mat-mini-fab [style.background]="color.name" (click)="backColor(color.name)"></button>
+                    </div>
+                </div>
+                
+            </mat-menu>
+        </div>
     </div>
+   
     <div role="button" class="add">
         <img class="divImg" src="../../../assets/image.svg" alt="">
     </div>

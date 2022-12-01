@@ -90,7 +90,7 @@ colors:Array<any> = [
   archeive(){
     let data={
       noteId:[this.notesCard.noteId],
-    }
+    } 
     console.log(data);
     this.notes.ArchiveNote(data).subscribe((response:any)=>{
       console.log(response);

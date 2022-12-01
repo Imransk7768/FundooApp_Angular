@@ -1,16 +1,16 @@
 <div class="container" fxLayout="row wrap" fxLayoutGap="grid">
-  <div fxLayout="column" fxLayoutAlign=" center" *ngFor="let notes of NotesList" class="con">
+  <div fxLayout="column" fxLayoutAlign=" center" *ngFor="let notes of NotesList | search: searchWord" class="con">
     <div class="content" [style.background]="notes.color">
       <div (click)="openDialog(notes)">
         <div class="pin"><img src="../../../assets/pin.svg" alt="" width="25px" /></div>
         <div>
-          <p class="text">{{notes.title}}</p>
+          <h2><p class="text">{{notes.title}}</p></h2>
           <p class="text">{{notes.description}}</p>
         </div>
        
       </div>
       <div class="row-in" style="flex-direction: row;">
-        <app-icons [notesCard]="notes" (displaytoIcons)="receiveMsgIconsToDisplay($event)"></app-icons>
+        <app-icons class="iconapp" [notesCard]="notes" (displaytoIcons)="receiveMsgIconsToDisplay($event)"></app-icons>
       </div>
     </div>
   </div>

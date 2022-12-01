@@ -1,6 +1,7 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DataService } from 'src/app/Services/data/data.service';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
 @Component({
@@ -15,12 +16,21 @@ export class DisplayNotesComponent implements OnInit {
   show=false;
 
   submitted=false;
-
-  constructor(private dialog:MatDialog) { }
+  subscription: any;
+  message: any;
+  searchWord:any
+  constructor(private dialog:MatDialog,private sdata:DataService) { }
   @Input() NotesList:any;
   @Output() displaytoGetAllNotes = new EventEmitter<string>();
-  
-  ngOnInit(): void {}
+
+
+  ngOnInit(): void {
+        this.sdata.searchNote.subscribe(message=>{
+          this.message=message; 
+      console.log("Searching Notes =",message.data[0]);
+      this.searchWord = message.data[0]
+    });
+  }
 
   openDialog(notes:any): void {
     const dialogRef = this.dialog.open(UpdatenoteComponent,

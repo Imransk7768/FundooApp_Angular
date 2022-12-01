@@ -1,113 +1,141 @@
-
 .example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .example-toolbar{
-    background: transparent;
-  }
-  
-  .head-style {
-    font-weight: bold;
-  }
-  .example-is-mobile .example-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-  }
-  
-  h1.example-app-name {
-    margin-left: 8px;
-  }
-  
-  .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-toolbar {
+  background: transparent;
+}
+
+.head-style {
+  font-weight: bold;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-    height: 650px;
-    overflow-y: hidden;
-  }
-  
-  .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+  flex: 1;
+  height: 650px;
+  overflow-y: hidden;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
-  }
-  
-  .search-box
-  {    
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    background-color: #f1f3f4;
-    border-radius: 10px;
-    margin-left: 100px;   
-    padding: 5px;
-    height: 30px;   
-    font-weight: bold;
-    overflow: hidden;
-    input
-    {
+  flex: 1 0 auto;
+}
+
+.menu {
+  padding-left: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #f1f3f4;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  height: 30px;
+  font-weight: bold;
+  overflow: hidden;
+
+  input {
     background-color: transparent;
-        border: none;
-        width: 100%;
-        height: 35px;
-        outline-style: none;
-        font-size: 20px;
-      }
-    .img
-    {
-      margin-right: 10px;
-      padding: 10px;
-      height: 24px;
-    }
+    border: none;
+    width: 100%;
+    height: 35px;
+    outline-style: none;
+    font-size: 20px;
   }
-  .sidenav-icon
-  {
-    width: 22px;
-    
+
+  .img {
+    margin-right: 10px;
+    padding: 10px;
+    height: 24px;
   }
-  .span.mat-list-item-content
-  {
-    padding-left: 12px;
+}
+.sidenav-icon {
+  width: 22px;
+
+}
+
+.span.mat-list-item-content {
+  padding-left: 12px;
+}
+
+.upper-icon {
+  width: 25px;
+  margin-left: 18px;
+}
+
+.topnav-icon {
+  padding: 0 5px 0 5px;
+  padding-left: 320px;
+  padding-right: 20px;
+}
+.sidenavtext {
+  margin-left: 15px;
+  margin-top: 12px;
+  padding: 9px 23px;
+  font-weight: 5px bold;
+}
+
+.menuimg {
+  margin-top: 2%;
+}
+
+.mat-list-base {
+  padding-top: 10px;
+  display: block;
+}
+
+.right-end {
+  padding-left: 80px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+
+  .menu {
+    margin-top: 15%;
+    justify-content: left;
+    padding-left: 20px;
   }
-  .upper-icon
-  {
-    width: 25px;
+
+  .navlist {
+    margin-top: -20%;
+  }
+
+  .upper-icon {
+    width: 0px;
     margin-left: 18px;
+  }
+  .search-box{
+    overflow: visible;
+    width: 50px;
   }
   .topnav-icon
   {
-    padding: 0 5px 0 5px;
-    padding-left: 320px;
-    padding-right: 20px;
+    padding-left: 0px;
   }
-  .sidenavtext
-  {
-    margin-left: 15px;
-    margin-top: 12px;
-    padding: 9px 23px;
-    font-weight: 5px bold;
+  .right-end {
+    padding-left: 0px;
   }
-  .menuimg 
-{
-    margin-top: 2%;
-}
-.mat-list-base 
-{
-    padding-top: 10px;
-    display: block;
-}
-.right-end
-{
-    padding-left: 80px;
-}
-.note-panel
-{
-    
+  
 }

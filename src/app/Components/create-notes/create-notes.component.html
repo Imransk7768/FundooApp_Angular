@@ -1,13 +1,13 @@
-<div class="container">
-    <form [formGroup]="noteForm">
+<div class="container" >
+    <form [formGroup]="noteForm" (ngSubmit)="close">
         <div class="content" >
             <div *ngIf="isShow">
                 <input class="txtclass" type="text" placeholder="Title" formControlName="title">
-                <div class="img"> <img src="../../../assets/pin.svg" alt="" width="25px" /></div>
+                <div class="img pin"> <img src="../../../assets/pin.svg" alt="" width="25px" /></div>
             </div>
             <div class="note" *ngIf="!isShow || isShow" (click)="show()">
                 <input class="mySearch" type="text" placeholder="Take a note" formControlName="description">
-                <div class="row-out" *ngIf="!isShow" (click)="show()">
+                <div class="row-out" *ngIf="!isShow">
                     <div class="imgout"> <img src="../../../assets/checkbox.svg" alt="" width="25px" /></div>
                     <div class="imgout"> <img src="../../../assets/brush.svg" alt="" width="25px" /></div>
                     <div class="imgout"> <img src="../../../assets/image.svg" alt="" width="25px" /></div>
@@ -15,12 +15,10 @@
             </div>
             <div *ngIf="isShow">
                 <div class="ic" style="flex-direction: row;">
-                    <div>
-                        <app-icons ></app-icons>
+                    <div class="icon-app">
+                        <app-icons></app-icons>
                     </div>
                     <div class="close row-in">
-                        <div class="imgin"> <img src="../../../assets/undo.svg" alt="" width="25px" /></div>
-                        <div class="imgin"> <img src="../../../assets/redo.svg" alt="" width="25px" /></div>
                         <div><button class="btnclose" (click)="close()">Close</button></div>
                     </div>
                 </div>

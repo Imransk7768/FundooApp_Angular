@@ -12,6 +12,7 @@
     cursor: pointer;
 }
 
+
 .txtclass {
     height: 30px;
     font-size: large;
@@ -50,7 +51,7 @@ input:focus {
 .btnclose {
     //display: flex;
     //align-items: center;
-    margin-left: 180px;
+    margin-left: 250px;
     border: none;
     border-radius: 8px;
 
@@ -99,4 +100,28 @@ input:focus {
 }
 .imgin ,.imgout{
     margin-right: 10px;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .container {
+        width: 250px;
+        margin:32px auto 16px auto;
+        padding-top: 50%;
+        
+    }
+    .ic {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+    .btnclose {
+        display: flex;
+        align-items: center;
+        margin-left: 160px;
+        border: none;
+        border-radius: 8px;
+    }
+    .pin
+    {
+        margin-left: 200px;
+    }
 }

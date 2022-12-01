@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/noteServices/note.service';
 
 @Component({
@@ -10,12 +11,13 @@ import { NoteService } from 'src/app/Services/noteServices/note.service';
 export class CreateNotesComponent implements OnInit {
   panelOpenState = false;
   noteForm!: FormGroup;
-
+  
   isShow = false;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,private note:NoteService) { }
-@Output() displaytoGetAllNotes = new EventEmitter<string>();
+  constructor(private formBuilder: FormBuilder,private note:NoteService,private snackbar:MatSnackBar) { }
+  @Input() NotesList:any;
+  @Output() displaytoGetAllNotes = new EventEmitter<string>();
   ngOnInit(): void {
     this.noteForm = this.formBuilder.group({
       title: ['', Validators.required],
@@ -36,11 +38,16 @@ export class CreateNotesComponent implements OnInit {
         description: this.noteForm.value.description,
         // service: 'advance'
       }
+      console.log(notedata)
       this.note.CreateNote(notedata).subscribe((response:any)=>{
       console.log(response)
       this.displaytoGetAllNotes.emit(response);
       })
+    this.snackbar.open("Note Created",'',{duration:3000});
     }
+  }
+  onSubmit(){
+    this.submitted=true;
   }
   // hideAndShow(){
   //   console.log("hiding the description")

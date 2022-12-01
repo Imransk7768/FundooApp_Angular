@@ -1,2 +1,4 @@
-<app-create-notes (displaytoGetAllNotes)="receiveMsgfromDisplay($event)"></app-create-notes>
-<app-display-notes [NotesList]="noteArray" (displaytoGetAllNotes)="receiveMsgfromDisplay($event)"></app-display-notes>
+<div class="container">
+    <app-create-notes (displaytoGetAllNotes)="receiveMsgfromDisplay($event)"></app-create-notes>
+    <app-display-notes [NotesList]="noteArray" (displaytoGetAllNotes)="receiveMsgfromDisplay($event)"></app-display-notes>    
+</div>

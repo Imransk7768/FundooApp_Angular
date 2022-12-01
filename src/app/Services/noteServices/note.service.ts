@@ -69,4 +69,13 @@ export class NoteService {
     }
     return this.httpservice.putService(`/Notes/Color?noteId=${data.noteId}&backgroundColor=${data.Color}`,data,true,header);
   }
+  DeleteNote(data:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'bearer '+this.token
+      })
+    }
+    return this.httpservice.deleteService(`/Notes/Delete?noteId=${data.noteId}`,true,header);
+  }
 }

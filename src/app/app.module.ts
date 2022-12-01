@@ -39,6 +39,8 @@ import { AUthguardService } from './Services/AuthGuard/authguard.service';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
     IconsComponent,
     TrashComponent,
     ArchiveComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
     MatListModule,
     MatExpansionModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [
     AUthguardService

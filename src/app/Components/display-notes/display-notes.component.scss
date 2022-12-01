@@ -8,14 +8,36 @@
 }
 .container
 {
-    gap: 15px;
+    gap: 35px;
     padding-top: 20px;
     padding-left: 150px;
 }
+.content .row-in{
+    visibility: hidden;
+
+}
+.content:hover .row-in
+{
+    visibility: inherit;
+}
+.pin{
+    visibility: hidden;
+}
+.content:hover .pin{
+    visibility: inherit;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .container
+    {
+        gap: 15px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+}
 .text
 {
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-bottom: 0px;
 }
 input:focus {
     outline: none;

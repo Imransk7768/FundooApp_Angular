@@ -1,11 +1,11 @@
 <div class="OuterDiv">
-    <div role="button" class="add">
+    <div role="button" class="add" *ngIf="!isTrash">
         <img class="divImg" src="../../../assets/alert.svg" alt="">
     </div>
-    <div role="button" class="add">
+    <div role="button" class="add" *ngIf="!isTrash">
         <img class="divImg" src="../../../assets/collab.svg" alt="">
     </div>
-    <div>
+    <div *ngIf="!isTrash">
         <div role="button" class="add" [matMenuTriggerFor]="colormenu">
             <img class="divImg" src="assets/background.svg" alt="">
             <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
@@ -19,17 +19,20 @@
         </div>
     </div>
    
-    <div role="button" class="add">
+    <div role="button" class="add" *ngIf="!isTrash">
         <img class="divImg" src="../../../assets/image.svg" alt="">
     </div>
-    <div role="button" class="add">
+    <div role="button" class="add" *ngIf="!isTrash && !isArcheive">
         <img class="divImg" src="../../../assets/archive.png" (click)=" archeive()" alt="">
     </div>
-    <div class="add">
+    <div role="button" class="add" *ngIf="!isTrash && isArcheive">
+        <img class="divImg" src="../../../assets/unarchive.svg" (click)="unArcheive()" alt="">
+    </div>
+    <div class="add" *ngIf="!isTrash">
         <button mat-icon-button [matMenuTriggerFor]="menu">
             <img class="divImg menu" src="../../../assets/more_vert.png" alt="">
         </button>
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu="matMenu" class="delmenu">
             <button mat-menu-item (click)="trash()">Delete note</button>
             <button mat-menu-item>Add label</button>
             <button mat-menu-item>Add drawing</button>
@@ -37,5 +40,14 @@
             <button mat-menu-item>Show tick boxes</button>
             <button mat-menu-item>Copy to Google Docs</button>
         </mat-menu>
+    </div>
+    <div class="add" *ngIf="isTrash" fxLayout="row" fxLayourAlign="center">
+        <div class="forDelete">
+            <img class="icons" (click)="Delete()" src="../.../../../../assets/delete_forever.svg" alt="">
+        </div>
+
+        <div class="forRestore" >
+            <img class="icons" src="../../../assets/restore_trash.svg" alt=""(click)=" Restore()">
+        </div>
     </div>
 </div>

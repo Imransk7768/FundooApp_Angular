@@ -39,3 +39,35 @@
     justify-content: space-around;
     padding-left: 12px;
 }
+.OuterDiv .delmenu 
+{
+    visibility: visible;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .OuterDiv {
+        //display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        width: 0px;
+    
+    } 
+    .add
+     {
+        padding-top: 0px;
+        padding-right: 0px;
+        //border: 10px;
+        margin: 0px;
+    
+        .material-symbols-outlined {
+            //padding: 10px;
+        }
+    
+        .divImg {
+            display: flex;
+            // width: 25px;
+            // height: 25px;
+            //padding-left: 20px;
+        }
+    }
+}
